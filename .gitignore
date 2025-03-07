@@ -1,0 +1,4 @@
+# The Following directories should be IGNORED... Thank you :)
+build/
+.vscode/
+
