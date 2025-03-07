@@ -7,8 +7,8 @@ find_package(SDL3_ttf)
 
 add_executable(AdventureQuest
     src/main.cpp
-    src/window.cpp
-    src/engine.cpp
+    src/main/window.cpp
+    src/main/engine.cpp
 )
 
 target_link_libraries(AdventureQuest SDL3::SDL3 
