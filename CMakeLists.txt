@@ -9,6 +9,7 @@ add_executable(AdventureQuest
     src/main.cpp
     src/main/window.cpp
     src/main/engine.cpp
+	src/rendering/renderer.cpp
 )
 
 target_link_libraries(AdventureQuest SDL3::SDL3 
