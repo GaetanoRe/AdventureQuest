@@ -8,20 +8,19 @@
 int main(){
     
     // Create a unique pointer of type Engine
-    std::unique_ptr<Engine> engine = std::make_unique<Engine>();
+    std::unique_ptr<Engine> engine = std::make_unique<Engine>("Hello SLD3!", 600, 300);
 
     // Initialize the engine
-    engine.get()->initialize();
-
+    engine->initialize();
+	
     // Output to signal that SDL has succeeded
     std::cout << "Hello SDL3!!!!" << std::endl;
     
     // While the engine is still running, update everything
-    while(!engine.get()->isDone()){
-        engine.get()->update();
+    while(!engine->isDone()){
+		engine->handleEvents();
+        engine->update();
+		engine->render();
     }
-
-    // Clean Up SDL when finished
-    SDL_Quit();
     return 0;
 }

@@ -5,15 +5,15 @@
 
 class Window{
     private:
-        std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)> window_{nullptr, SDL_DestroyWindow};
+        SDL_Window * window_;
         int width_;
         int height_;
         std::string title_;
     
     public:
         Window(std::string title, int width_, int height_);
-        void initialize();
-        SDL_Window * getRawWindow();
+        void setWindow(SDL_Window * window);
+        SDL_Window * getWindow();
         int getWidth();
         int getHeight();
         std::string getTitle();
