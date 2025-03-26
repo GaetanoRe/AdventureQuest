@@ -1,5 +1,5 @@
-#include "../include/rendering/texture.hpp"
-#include "../include/rendering/renderer.hpp"
+#include "../../include/rendering/texture.hpp"
+#include "../../include/rendering/renderer.hpp"
 #include <memory>
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
@@ -14,7 +14,7 @@ Texture::Texture(const std::string &filename, std::shared_ptr<Renderer> renderer
     }
 
     if(auto rendererShared = rendererRef_.lock()){
-        texture_.reset(SDL_CreateTextureFromSurface(rendererShared->getRawRenderer(), surface));
+        texture_.reset(SDL_CreateTextureFromSurface(rendererShared->getRenderer(), surface));
     }
 
     width_ = surface->w;

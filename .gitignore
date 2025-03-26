@@ -1,4 +1,9 @@
 # The Following directories should be IGNORED... Thank you :)
 build/
+x64/
 .vscode/
+.vs/
+libraries/SDL/
+libraries/SDL_image/
+libraries/SDL_ttf/
 
